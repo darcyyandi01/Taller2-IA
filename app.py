@@ -57,18 +57,18 @@ with col1:
     st.subheader("Desempeño Académico")
     tareas = st.number_input(
         "Tareas (0 - 100)",
-        min_value=0.0,
-        max_value=100.0,
-        value=75.0,
-        step=1.0,
+        min_value=0,
+        max_value=100,
+        value=75,
+        step=1,
         help="Calificación acumulada de entregables y talleres prácticos"
     )
     examenes = st.number_input(
         "Exámenes (0 - 100)",
-        min_value=0.0,
-        max_value=100.0,
-        value=65.0,
-        step=1.0,
+        min_value=0,
+        max_value=100,
+        value=65,
+        step=1,
         help="Promedio ponderado de exámenes parciales y final"
     )
     asistencia = st.number_input(
@@ -76,7 +76,8 @@ with col1:
         min_value=0.0,
         max_value=100.0,
         value=85.0,
-        step=1.0,
+        step=0.1,
+        format="%.1f",
         help="Porcentaje global de asistencia presencial a clases"
     )
 
@@ -84,18 +85,18 @@ with col2:
     st.subheader("⏱️ Hábitos y Entorno")
     estudio_horas = st.number_input(
         "Horas de Estudio Semanales",
-        min_value=0.0,
-        max_value=50.0,
-        value=14.0,
-        step=0.5,
+        min_value=0,
+        max_value=50,
+        value=14,
+        step=1,
         help="Promedio de horas dedicadas al estudio independiente por semana"
     )
     sueno_horas = st.number_input(
         "Horas de Sueño Diarias",
-        min_value=0.0,
-        max_value=24.0,
-        value=7.0,
-        step=0.5,
+        min_value=0,
+        max_value=24,
+        value=7,
+        step=1,
         help="Promedio de horas de descanso diario nocturno"
     )
     extracurriculares = st.selectbox(
