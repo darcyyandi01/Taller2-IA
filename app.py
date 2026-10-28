@@ -7,7 +7,6 @@ import streamlit as st
 # Configuración de la página
 st.set_page_config(
     page_title="Predicción de Aprobación de Estudiantes",
-    page_icon="🎓",
     layout="wide"
 )
 
@@ -29,7 +28,7 @@ except Exception as e:
     st.stop()
 
 # Título y descripción
-st.title("🎓 Predicción de Aprobación de Estudiantes (MLP)")
+st.title("Predicción de Aprobación de Estudiantes (MLP)")
 st.markdown("""
 Esta aplicación utiliza un modelo de **Deep Learning (Perceptrón Multicapa - MLP)** entrenado para predecir si un estudiante 
 aprobará o reprobará la asignatura a partir de su desempeño académico y hábitos de vida.
@@ -55,7 +54,7 @@ with st.sidebar:
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("📚 Desempeño Académico")
+    st.subheader("Desempeño Académico")
     tareas = st.number_input(
         "Tareas (0 - 100)",
         min_value=0.0,
@@ -109,7 +108,7 @@ with col2:
 st.divider()
 
 # Botón de predicción
-if st.button("🚀 Generar Predicción", type="primary", use_container_width=True):
+if st.button(" Generar Predicción", type="primary", use_container_width=True):
     feature_names = [
         'Tareas',
         'Examenes',
@@ -135,13 +134,13 @@ if st.button("🚀 Generar Predicción", type="primary", use_container_width=Tru
     prob_apr = probas[1] * 100
     prob_rep = probas[0] * 100
 
-    st.subheader("🎯 Resultado de la Estimación")
+    st.subheader(" Resultado de la Estimación")
     res_col1, res_col2 = st.columns(2)
 
     with res_col1:
         st.metric(
             label="Pronóstico del Estudiante",
-            value="🎉 APROBADO" if prediccion == 1 else "⚠️ REPROBADO"
+            value="APROBADO" if prediccion == 1 else "REPROBADO"
         )
     with res_col2:
         st.metric(
