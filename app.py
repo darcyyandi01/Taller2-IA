@@ -28,7 +28,7 @@ except Exception as e:
     st.stop()
 
 # Título y descripción
-st.title("Predicción de Aprobación de Estudiantes (MLP)")
+st.title("Predicción de Aprobación de Estudiantes ")
 st.markdown("""
 Esta aplicación utiliza un modelo de **Deep Learning (Perceptrón Multicapa - MLP)** entrenado para predecir si un estudiante 
 aprobará o reprobará la asignatura a partir de su desempeño académico y hábitos de vida.
@@ -36,9 +36,9 @@ aprobará o reprobará la asignatura a partir de su desempeño académico y háb
 
 # Barra lateral con información del modelo
 with st.sidebar:
-    st.header("ℹ️ Información del Modelo")
+    st.header("Información del Modelo")
     st.markdown("""
-    - **Algoritmo:** Perceptrón Multicapa (MLPClassifier)
+    - **Algoritmo:** Perceptrón Multicapa 
     - **Arquitectura:** Capas ocultas (64, 32) con activación ReLU y optimizador Adam
     - **Métricas de Rendimiento:**
       - **Accuracy:** ~96.7% - 97.5%
@@ -82,7 +82,7 @@ with col1:
     )
 
 with col2:
-    st.subheader("⏱️ Hábitos y Entorno")
+    st.subheader("Hábitos y Entorno")
     estudio_horas = st.number_input(
         "Horas de Estudio Semanales",
         min_value=0,
